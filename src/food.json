@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Fried Mushrooms",
+    "recipe": {
+      "Mushroom": 2
+    },
+    "effects": "Recovers 5 satiety\nRecovers 10% + 1,500 HP"
+  },
+  {
+    "name": "Crispy Grilled Fish",
+    "recipe": {
+      "Silver Bass": 1
+    },
+    "effects": "Recovers 10 satiety"
+  }
+]
