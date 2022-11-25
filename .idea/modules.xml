@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tofu_foods.iml" filepath="$PROJECT_DIR$/.idea/tofu_foods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/blueprint_storage.iml" filepath="$PROJECT_DIR$/.idea/blueprint_storage.iml" />
     </modules>
   </component>
 </project>

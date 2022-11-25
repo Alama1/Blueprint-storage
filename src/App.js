@@ -1,28 +1,44 @@
 import {Component} from 'react'
 import './App.css';
 import Header from './components/Header/Header.component';
-import food from './food.json';
+import BlueprintsList from "./components/BlueprintsList/BlueprintsList.component";
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            foodsList: []
+            blueprints: []
         }
     }
 
     render() {
+        console.log('render')
         return (
             <div className={'App'}>
                 <Header/>
-                {food.map((dish) => {
-                    return <h1>{dish.name}</h1>
-            })}
+                <BlueprintsList className='blueprintList'/>
             </div>
         )
     }
 
-    componentDidMount() {
+    importAll(r) {
+        let images = {};
+        r.keys().map((item, index) => { return images[item.replace('./', '')] = r(item); });
+        return images;
+    }
+
+    async componentDidMount() {
+        const images = this.importAll(require.context('./assets/blueprints', false, /\.(png|jpe?g|svg)$/));
+        let blueprints = []
+        Object.keys(images).forEach((blueprintName) => {
+            blueprints.push({
+                name: blueprintName,
+                src: images[blueprintName]
+            })
+        })
+        this.setState(() => {
+            return { blueprints: blueprints}
+        })
 
     }
 

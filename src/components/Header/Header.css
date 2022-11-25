@@ -1,9 +1,15 @@
 .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 5px 0;
     text-align: left;
     background: #222;
+    color: #39c2c2;
+
 }
 .header img {
-    width: 250px;
+    width: 40px;
     height: 40px;
+    margin-left: 50px;
 }
